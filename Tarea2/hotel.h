@@ -15,7 +15,9 @@ public:
 
     Hotel(string Entrada, string Salida);
     void insertarHotel(string Nombre, string entrada, string salida);
+    void Generar();
     void Buscar();
 };
+
 
 #endif // HOTEL_H

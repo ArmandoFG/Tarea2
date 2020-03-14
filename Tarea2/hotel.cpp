@@ -23,16 +23,6 @@ Hotel::Hotel(string Entrada, string Salida)
     this->Entrada = Entrada;
     this->Salida = Salida;
     Cabeza = NULL;
-    this->insertarHotel("Hotel Estrella", "16/03/2020", "20/03/2020");
-    this->insertarHotel("Hotel Mira Mar", "18/03/2020", "25/03/2020");
-    this->insertarHotel("Hotel BElla Vista", "20/03/2020", "25/03/2020");
-    this->insertarHotel("Hotel Valle Grande", "18/03/2020", "25/03/2020");
-    this->insertarHotel("Hotel Cancun", "16/03/2020", "20/03/2020");
-    this->insertarHotel("Hotel LLano", "16/03/2020", "20/03/2020");
-    this->insertarHotel("Hotel Garro", "20/03/2020", "25/03/2020");
-    this->insertarHotel("Hotel Cerro", "18/03/2020", "25/03/2020");
-    this->insertarHotel("Hotel HP", "16/03/2020", "20/03/2020");
-    this->insertarHotel("Hotel Oceania", "20/03/2020", "25/03/2020");
 
 
 }
@@ -50,16 +40,31 @@ void Hotel::insertarHotel(string Nombre, string entrada, string salida){
         Cabeza = nuevo;
 
     }
-
+    else{
     Auxiliar = Cabeza;
     while(Auxiliar->siguiente != NULL){
         Auxiliar = Auxiliar->siguiente;
     }
     Auxiliar->siguiente = nuevo;
 }
+}
 
 
+void Hotel::Generar()
+{
+    insertarHotel("Hotel Estrella", "16/03/2020", "20/03/2020");
+    insertarHotel("Hotel Mira Mar", "18/03/2020", "25/03/2020");
+    insertarHotel("Hotel BElla Vista", "20/03/2020", "25/03/2020");
+    insertarHotel("Hotel Valle Grande", "18/03/2020", "25/03/2020");
+    insertarHotel("Hotel Cancun", "16/03/2020", "20/03/2020");
+    insertarHotel("Hotel LLano", "16/03/2020", "20/03/2020");
+    insertarHotel("Hotel Garro", "20/03/2020", "25/03/2020");
+    insertarHotel("Hotel Cerro", "18/03/2020", "25/03/2020");
+    insertarHotel("Hotel HP", "16/03/2020", "20/03/2020");
+    insertarHotel("Hotel Oceania", "20/03/2020", "25/03/2020");
 
+
+}
 
 
 
@@ -70,8 +75,8 @@ void Hotel::Buscar()
     Temp = Cabeza;
     while (Temp->siguiente != NULL){
         if(Temp->entrada == Entrada && Temp->salida == Salida){
-            cout<<Temp->nombre<<" Entrada: "<<Temp->entrada<<" Salida:"<<Temp->salida;
-            break;
+            cout<<Temp->nombre<<" Entrada: "<<Temp->entrada<<" Salida:"<<Temp->salida<<"\n";
+
 
         }
         Temp = Temp->siguiente;
