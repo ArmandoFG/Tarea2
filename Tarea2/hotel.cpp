@@ -54,7 +54,7 @@ void Hotel::Generar()
 {
     insertarHotel("Hotel Estrella", "16/03/2020", "20/03/2020");
     insertarHotel("Hotel Mira Mar", "18/03/2020", "25/03/2020");
-    insertarHotel("Hotel BElla Vista", "20/03/2020", "25/03/2020");
+    insertarHotel("Hotel Bella Vista", "20/03/2020", "25/03/2020");
     insertarHotel("Hotel Valle Grande", "18/03/2020", "25/03/2020");
     insertarHotel("Hotel Cancun", "16/03/2020", "20/03/2020");
     insertarHotel("Hotel LLano", "16/03/2020", "20/03/2020");
@@ -71,6 +71,8 @@ void Hotel::Generar()
 
 void Hotel::Buscar()
 {
+
+    cout<< "\n"<<"Hoteles Disponibles"<<"\n \n";
     auxHotel Temp;
     Temp = Cabeza;
     while (Temp->siguiente != NULL){

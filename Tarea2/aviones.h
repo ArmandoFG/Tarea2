@@ -9,14 +9,15 @@ using namespace std;
 class Aviones
 {
 public:
-    int diaEntrada;
-    int diaSalida;
-    int mesEntrada;
-    int mesSalida;
+    string Ida;
+    string Vuelta;
     string origen;
     string destino;
 
-    Aviones(int diaEntrada, int mesEntrada, int diaSalida, int mesSalida, string origen, string destino);
+    Aviones(string Ida, string Vuelta, string origen, string destino);
+    void insertarAvion(string Empresa, string ida, string vuelta, string origen, string destino);
+    void Generar();
+    void Buscar();
 };
 
 #endif // AVIONES_H
