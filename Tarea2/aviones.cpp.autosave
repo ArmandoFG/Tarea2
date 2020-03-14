@@ -1,0 +1,59 @@
+#include "aviones.h"
+#include "string.h"
+#include <string.h>
+#include <string>
+
+using namespace std;
+
+
+struct AVION{
+    string nombre;
+    AVION *Siguiente;
+    string Ida;
+    string Vuelta;
+    string Origen;
+    string Destino;
+};
+typedef struct AVION *AuxAvion;
+
+AuxAvion Cabeza;
+
+Aviones::Aviones(string Ida, string Vuelta, string origen, string destino)
+{
+
+
+    this->Vuelta = Vuelta;
+    this->Ida = Ida;
+    this->origen = origen;
+    this->destino = destino;
+    Cabeza = NULL;
+}
+
+void Aviones::insertarAvion(string Empresa, string ida, string vuelta, string origen, string destino)
+{
+    AuxAvion Auxiliar;
+    AuxAvion nuevo = new struct AVION;
+    nuevo->nombre = Empresa;
+    nuevo->Siguiente = NULL;
+    nuevo->Ida = ida;
+    nuevo->Vuelta = vuelta;
+    nuevo->Origen = origen;
+    nuevo->Destino = destino;
+    if (Cabeza == NULL){
+        Cabeza = nuevo;
+
+    }
+    else{
+    Auxiliar = Cabeza;
+    while(Auxiliar->Siguiente != NULL){
+        Auxiliar = Auxiliar->Siguiente;
+    }
+    Auxiliar->Siguiente = nuevo;
+    }
+}
+
+void Aviones::Generar()
+{
+    insertarAvion("Avianca", "16/03/2020", "20/03/2020", "Costa Rica", "Colombia");
+    
+}
