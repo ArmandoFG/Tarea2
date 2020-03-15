@@ -55,12 +55,12 @@ void Aviones::insertarAvion(string Empresa, string ida, string vuelta, string or
 
 void Aviones::Generar()
 {
-    insertarAvion("Avianca", "16/03/2020", "20/03/2020", "Costa Rica", "Colombia");
-    insertarAvion("Avianca", "18/03/2020", "25/03/2020", "Costa Rica", "Argentina");
-    insertarAvion("American Airlines", "20/03/2020", "25/03/2020", "Costa Rica", "Panama");
-    insertarAvion("Avianca", "16/03/2020", "20/03/2020", "Costa Rica", "Panama");
-    insertarAvion("American Airlines", "18/03/2020", "25/03/2020", "Costa Rica", "Perú");
-    insertarAvion("American Airlines", "20/03/2020", "25/03/2020", "Costa Rica", "Colombia");
+    insertarAvion("Avianca", "16/03/2020", "20/03/2020", "China", "Colombia");
+    insertarAvion("Avianca", "18/03/2020", "25/03/2020", "China", "Argentina");
+    insertarAvion("American Airlines", "20/03/2020", "25/03/2020", "China", "Panama");
+    insertarAvion("Avianca", "16/03/2020", "20/03/2020", "China", "Panama");
+    insertarAvion("American Airlines", "18/03/2020", "25/03/2020", "China", "Perú");
+    insertarAvion("American Airlines", "20/03/2020", "25/03/2020", "China", "Colombia");
 
 
 }
